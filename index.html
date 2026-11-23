@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TodoJuegos Argentina | Canjear Código GTA VI</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+:root{
+  --pink:#ff4fa3;
+  --orange:#ff9b42;
+  --violet:#8c5bff;
+  --ink:#08090e;
+  --panel:#11131c;
+  --muted:#a6a8b5;
+  --line:rgba(255,255,255,.1);
+  --green:#39d98a;
+  --ps-blue:#1e6bff;
+  --ps-glow:rgba(30,107,255,.35);
+  --xb-green:#10c44c;
+  --xb-glow:rgba(16,196,76,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:#08090e;
+  color:#fff;
+  font-family:Inter,Arial,sans-serif;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(ellipse at 12% 8%,rgba(255,79,163,.16),transparent 32%),
+    radial-gradient(ellipse at 88% 28%,rgba(255,155,66,.12),transparent 34%),
+    linear-gradient(145deg,#090a12,#08090e 65%);
+}
+header{
+  height:76px;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 clamp(18px,5vw,72px);
+  background:rgba(7,8,13,.82);
+  backdrop-filter:blur(16px);
+  position:sticky;
+  top:0;
+  z-index:5;
+}
+.brand{
+  font:900 27px 'Barlow Condensed',sans-serif;
+  letter-spacing:.3px;
+  text-transform:uppercase;
+}
+.brand span{color:var(--pink)}
+.brand small{
+  display:block;
+  font:600 9px Inter;
+  letter-spacing:3px;
+  color:#aeb0bd;
+  margin-top:-3px;
+}
+.header-right{
+  font-size:12px;
+  color:#c7c8d0;
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+.secure{
+  border:1px solid var(--line);
+  padding:9px 12px;
+  border-radius:30px;
+}
+main{
+  max-width:860px;
+  width:100%;
+  margin:0 auto;
+  padding:36px 22px 72px;
+  flex:1;
+}
+.hero-banner{
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:clamp(22px,4vw,38px);
+  background:
+    linear-gradient(125deg,rgba(255,79,163,.14),rgba(17,19,28,.96) 45%,rgba(140,91,255,.12));
+  box-shadow:0 24px 70px rgba(0,0,0,.42);
+  margin-bottom:26px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+}
+.eyebrow{
+  color:#ffb2d6;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:11px;
+  font-weight:800;
+}
+.hero-banner h1{
+  font:900 clamp(42px,7vw,68px)/.88 'Barlow Condensed',sans-serif;
+  letter-spacing:-1px;
+  margin:10px 0 12px;
+  text-transform:uppercase;
+}
+.hero-banner h1 span{color:#ff8cbd}
+.hero-banner p{
+  color:#d6d5df;
+  font-size:14px;
+  line-height:1.65;
+  margin:0;
+  max-width:520px;
+}
+.badge-digital{
+  border:1px solid rgba(255,140,189,.35);
+  background:rgba(255,79,163,.1);
+  color:#ffd6e8;
+  padding:10px 14px;
+  border-radius:12px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.step-card{
+  display:none;
+  animation:rise .32s ease;
+}
+.step-card.active{display:block}
+.step-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:14px;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.section-title{
+  font:800 28px 'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+  margin:0;
+}
+.step-count{
+  font-size:11px;
+  color:var(--muted);
+  letter-spacing:1.5px;
+  font-weight:700;
+}
+.progress{
+  height:4px;
+  background:#232636;
+  border-radius:6px;
+  margin-bottom:22px;
+  overflow:hidden;
+}
+.progress span{
+  display:block;
+  height:100%;
+  background:linear-gradient(90deg,var(--pink),var(--orange));
+  transition:width .35s ease;
+}
+.panel{
+  background:linear-gradient(145deg,rgba(22,24,35,.97),rgba(13,15,23,.97));
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:clamp(22px,4vw,34px);
+  box-shadow:0 20px 60px rgba(0,0,0,.28);
+  transition:border-color .3s ease,box-shadow .3s ease;
+}
+.panel.theme-ps{
+  border-color:rgba(56,139,255,.55);
+  box-shadow:0 0 38px rgba(30,107,255,.22),0 20px 60px rgba(0,0,0,.35);
+}
+.panel.theme-xb{
+  border-color:rgba(28,214,92,.55);
+  box-shadow:0 0 38px rgba(16,196,76,.22),0 20px 60px rgba(0,0,0,.35);
+}
+.platforms{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-top:16px;
+}
+.choice{
+  border:1px solid var(--line);
+  background:#151824;
+  border-radius:15px;
+  padding:20px;
+  text-align:left;
+  color:#fff;
+  cursor:pointer;
+  transition:.2s ease;
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+.choice:hover{
+  transform:translateY(-2px);
+  border-color:rgba(255,255,255,.28);
+}
+.choice.selected-ps{
+  border-color:#4d94ff;
+  background:linear-gradient(145deg,rgba(30,107,255,.2),#131929);
+  box-shadow:0 0 26px var(--ps-glow),inset 0 0 0 1px #4d94ff;
+}
+.choice.selected-xb{
+  border-color:#26d861;
+  background:linear-gradient(145deg,rgba(16,196,76,.2),#112117);
+  box-shadow:0 0 26px var(--xb-glow),inset 0 0 0 1px #26d861;
+}
+.plat-square{
+  width:38px;
+  height:38px;
+  border-radius:9px;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  font-weight:900;
+  overflow:hidden;
+}
+.plat-square.ps{
+  background:linear-gradient(135deg,#006fd6,#1a8cff);
+  box-shadow:0 0 16px rgba(30,107,255,.5);
+}
+.plat-square.xb{
+  background:linear-gradient(135deg,#0f8a2c,#19c744);
+  box-shadow:0 0 16px rgba(16,196,76,.5);
+}
+.plat-square svg{
+  width:24px;
+  height:24px;
+  fill:#fff;
+}
+.choice-text strong{
+  display:block;
+  font-size:17px;
+  font-weight:800;
+}
+.choice-text small{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:4px;
+}
+.user-banner{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:13px 16px;
+  border-radius:12px;
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--line);
+  margin-bottom:18px;
+  transition:.3s ease;
+}
+.user-banner.ps{
+  background:rgba(30,107,255,.12);
+  border-color:rgba(77,148,255,.45);
+  box-shadow:0 0 20px rgba(30,107,255,.18);
+}
+.user-banner.xb{
+  background:rgba(16,196,76,.12);
+  border-color:rgba(38,216,97,.45);
+  box-shadow:0 0 20px rgba(16,196,76,.18);
+}
+.user-banner b{
+  font-size:14px;
+  display:block;
+}
+.user-banner small{
+  color:#b5b8c7;
+  font-size:11px;
+}
+.field{
+  display:block;
+  margin:14px 0 8px;
+  color:#d2d4de;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.3px;
+}
+.input{
+  width:100%;
+  background:#090b12;
+  border:1px solid #303445;
+  color:#fff;
+  padding:14px 16px;
+  border-radius:10px;
+  font:600 15px Inter,sans-serif;
+  outline:none;
+  transition:.2s ease;
+}
+.input:focus{
+  border-color:var(--pink);
+  box-shadow:0 0 0 3px rgba(255,79,163,.14);
+}
+.panel.theme-ps .input:focus{
+  border-color:#4d94ff;
+  box-shadow:0 0 0 3px rgba(30,107,255,.25);
+}
+.panel.theme-xb .input:focus{
+  border-color:#26d861;
+  box-shadow:0 0 0 3px rgba(16,196,76,.25);
+}
+.code-input{
+  font-family:monospace !important;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:16px !important;
+}
+.hint{
+  font-size:11px;
+  color:#9598a8;
+  line-height:1.6;
+  margin-top:8px;
+}
+.status-msg{
+  margin-top:14px;
+  padding:13px 15px;
+  border-radius:11px;
+  font-size:13px;
+  font-weight:600;
+  display:none;
+}
+.status-msg.error{
+  display:block;
+  background:rgba(255,77,94,.12);
+  border:1px solid rgba(255,77,94,.45);
+  color:#ff9aa4;
+}
+.edition-box{
+  display:none;
+  margin-top:20px;
+  border:1px solid rgba(57,217,138,.35);
+  background:linear-gradient(135deg,rgba(57,217,138,.08),rgba(20,24,36,.95));
+  border-radius:16px;
+  padding:20px;
+  animation:rise .3s ease;
+}
+.edition-box.show{display:block}
+.edition-grid{
+  display:grid;
+  grid-template-columns:138px 1fr;
+  gap:20px;
+  align-items:center;
+}
+.cover-frame{
+  width:138px;
+  aspect-ratio:3/4;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.22);
+  box-shadow:0 12px 30px rgba(0,0,0,.45);
+  background:#111420;
+}
+.cover-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.edition-pill{
+  display:inline-block;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  padding:5px 10px;
+  border-radius:999px;
+  background:rgba(57,217,138,.16);
+  color:var(--green);
+  border:1px solid rgba(57,217,138,.35);
+  margin-bottom:8px;
+}
+.edition-box h3{
+  font:800 26px 'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  margin:0 0 8px;
+  letter-spacing:.5px;
+}
+.edition-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:10px 0 12px;
+  font-size:12px;
+  color:#c9ccd8;
+}
+.edition-meta span{
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--line);
+  padding:5px 10px;
+  border-radius:8px;
+}
+.edition-perks{
+  margin:0;
+  padding-left:18px;
+  color:#b7bac8;
+  font-size:12px;
+  line-height:1.7;
+}
+.summary-card{
+  background:#0b0d14;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:20px;
+  margin-top:12px;
+}
+.summary-top{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  padding-bottom:16px;
+  border-bottom:1px dashed #2e3242;
+  margin-bottom:14px;
+}
+.summary-cover{
+  width:72px;
+  aspect-ratio:3/4;
+  border-radius:9px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.2);
+  flex-shrink:0;
+}
+.summary-cover img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.summary-row{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  padding:9px 0;
+  font-size:13px;
+  color:#aeb1bf;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.summary-row:last-child{border-bottom:0}
+.summary-row strong{
+  color:#fff;
+  text-align:right;
+}
+.btn{
+  border:0;
+  border-radius:10px;
+  padding:14px 22px;
+  background:linear-gradient(100deg,var(--pink),#ff805e);
+  color:#160b13;
+  font-weight:900;
+  letter-spacing:.4px;
+  cursor:pointer;
+  transition:.2s ease;
+  box-shadow:0 8px 28px rgba(255,79,163,.22);
+  font-size:13px;
+}
+.btn:hover:not(:disabled){
+  transform:translateY(-2px);
+  filter:brightness(1.08);
+}
+.btn.secondary{
+  background:#202331;
+  color:#fff;
+  border:1px solid var(--line);
+  box-shadow:none;
+}
+.btn:disabled{
+  opacity:.42;
+  cursor:not-allowed;
+  transform:none;
+}
+.actions{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:24px;
+}
+.center-box{
+  text-align:center;
+  padding:44px 18px;
+}
+.spinner{
+  width:60px;
+  height:60px;
+  border:4px solid #2e3142;
+  border-top-color:var(--pink);
+  border-right-color:var(--orange);
+  border-radius:50%;
+  margin:0 auto 22px;
+  animation:spin .8s linear infinite;
+}
+.panel.theme-ps .spinner{
+  border-top-color:#4d94ff;
+  border-right-color:#8ab8ff;
+}
+.panel.theme-xb .spinner{
+  border-top-color:#26d861;
+  border-right-color:#78f09e;
+}
+.success-icon{
+  width:76px;
+  height:76px;
+  border-radius:50%;
+  background:rgba(57,217,138,.12);
+  border:1px solid rgba(57,217,138,.45);
+  color:var(--green);
+  display:grid;
+  place-items:center;
+  font-size:38px;
+  margin:0 auto 20px;
+  box-shadow:0 0 36px rgba(57,217,138,.16);
+}
+.center-box h2{
+  font:800 34px 'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  margin:0 0 10px;
+}
+.center-box p{
+  color:#c5c8d6;
+  font-size:14px;
+  line-height:1.7;
+  margin:6px auto;
+  max-width:520px;
+}
+.final-thanks{
+  margin-top:18px;
+  padding:15px 18px;
+  border-radius:12px;
+  background:rgba(255,79,163,.09);
+  border:1px solid rgba(255,79,163,.3);
+  color:#ffd9ea;
+  font-weight:700;
+  font-size:14px;
+}
+footer{
+  border-top:1px solid var(--line);
+  padding:24px;
+  text-align:center;
+  color:#727686;
+  font-size:11px;
+  letter-spacing:.6px;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(max-width:650px){
+  header{height:66px}
+  .header-right .secure{display:none}
+  .platforms{grid-template-columns:1fr}
+  .edition-grid{grid-template-columns:1fr}
+  .cover-frame{width:130px;margin:0 auto}
+  .actions{flex-direction:column-reverse}
+  .actions .btn{width:100%}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">TodoJuegos <span>Argentina</span><small>CANJE DIGITAL OFICIAL</small></div>
+  <div class="header-right"><span>GTA VI Digital</span><span class="secure">✦ Canje directo</span></div>
+</header>
+
+<main>
+  <div class="hero-banner">
+    <div>
+      <div class="eyebrow">Activación digital inmediata</div>
+      <h1>CANJEAR UN <span>CÓDIGO</span></h1>
+      <p>Ingresá tu plataforma, vinculá tu usuario y activá tu código digital de <strong>Grand Theft Auto VI</strong> para sumarlo a tu biblioteca.</p>
+    </div>
+    <div class="badge-digital">GTA VI · EDICIÓN DIGITAL</div>
+  </div>
+
+  <!-- PASO 1: PLATAFORMA -->
+  <section id="step-platform" class="step-card active">
+    <div class="step-head">
+      <h2 class="section-title">Plataforma</h2>
+      <span class="step-count">PASO 01 / 04</span>
+    </div>
+    <div class="progress"><span style="width:25%"></span></div>
+    <div class="panel" id="panel-platform">
+      <p style="color:#b4b7c6;font-size:13px;margin:0">¿En qué plataforma querés canjear el código?</p>
+      <div class="platforms">
+        <button type="button" class="choice" id="btn-ps" onclick="choosePlatform('PlayStation')">
+          <div class="plat-square ps">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8.98 3v18l5.3-1.75V5.1L8.98 3zm6.35 3.1v11.8l3.69-1.22V7.32l-3.69-1.22zM4.98 15.6L2 16.58l6.02 2.42v-2.25l-3.04-1.15z"/>
+            </svg>
+          </div>
+          <div class="choice-text">
+            <strong>PlayStation</strong>
+            <small>Canje en cuenta de PlayStation</small>
+          </div>
+        </button>
+
+        <button type="button" class="choice" id="btn-xb" onclick="choosePlatform('Xbox')">
+          <div class="plat-square xb">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.85 15.18c-1.35.92-3.02 1.42-4.85 1.42s-3.5-.5-4.85-1.42c.78-1.45 2.38-3.82 4.85-6.24 2.47 2.42 4.07 4.79 4.85 6.24zM7.15 6.82A7.96 7.96 0 0 1 12 5.2c1.82 0 3.5.6 4.85 1.62-.9.88-2.36 2.1-4.85 3.85-2.49-1.75-3.95-2.97-4.85-3.85zm-1.6 1.56c.96.98 2.42 2.28 4.65 3.92-2.25 2.18-3.7 4.35-4.48 5.75A7.96 7.96 0 0 1 4 12c0-1.32.56-2.58 1.55-3.62zm12.9 9.42c-.78-1.4-2.23-3.57-4.48-5.75 2.23-1.64 3.69-2.94 4.65-3.92A7.96 7.96 0 0 1 20 12c0 2.18-.58 4.22-1.55 5.8z"/>
+            </svg>
+          </div>
+          <div class="choice-text">
+            <strong>Xbox</strong>
+            <small>Canje en cuenta de Xbox</small>
+          </div>
+        </button>
+      </div>
+      <div class="actions">
+        <span></span>
+        <button type="button" class="btn" id="to-user-btn" disabled onclick="goToUserStep()">CONTINUAR →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASO 2: USERNAME -->
+  <section id="step-user" class="step-card">
+    <div class="step-head">
+      <h2 class="section-title">Usuario de la plataforma</h2>
+      <span class="step-count">PASO 02 / 04</span>
+    </div>
+    <div class="progress"><span style="width:50%"></span></div>
+    <div class="panel" id="panel-user">
+      <div class="user-banner" id="user-platform-banner">
+        <div class="plat-square" id="user-platform-icon"></div>
+        <div>
+          <b id="user-platform-label">Plataforma seleccionada</b>
+          <small id="user-platform-sub">Ingresá tu username para vincular el canje</small>
+        </div>
+      </div>
+
+      <label class="field" for="username-input" id="username-label">Ingresá tu username</label>
+      <input class="input" id="username-input" type="text" placeholder="Ej: TuUsuario" autocomplete="off">
+      <div class="hint" id="username-hint">Asegurate de escribir exactamente el nombre de usuario de tu cuenta.</div>
+      <div class="status-msg" id="user-error"></div>
+
+      <div class="actions">
+        <button type="button" class="btn secondary" onclick="showStep('step-platform')">← Volver</button>
+        <button type="button" class="btn" onclick="submitUsername()">CONTINUAR →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARGA INTERMEDIA DE USUARIO (2.5 SEGUNDOS) -->
+  <section id="step-user-loading" class="step-card">
+    <div class="step-head">
+      <h2 class="section-title">Verificando usuario</h2>
+      <span class="step-count">CONECTANDO</span>
+    </div>
+    <div class="progress"><span style="width:58%"></span></div>
+    <div class="panel center-box" id="panel-user-loading">
+      <div class="spinner"></div>
+      <h2 id="user-loading-title">Verificando cuenta...</h2>
+      <p id="user-loading-desc">Comprobando el perfil ingresado en la plataforma seleccionada.</p>
+    </div>
+  </section>
+
+  <!-- PASO 3: INSERTAR CÓDIGO -->
+  <section id="step-code" class="step-card">
+    <div class="step-head">
+      <h2 class="section-title">Insertar código</h2>
+      <span class="step-count">PASO 03 / 04</span>
+    </div>
+    <div class="progress"><span style="width:75%"></span></div>
+    <div class="panel" id="panel-code">
+      <label class="field" for="code-input">Insertar código</label>
+      <input class="input code-input" id="code-input" type="text" placeholder="INGRESÁ TU CÓDIGO AQUÍ" autocomplete="off">
+      <div class="hint">Ingresá el código digital del juego para identificar automáticamente la edición.</div>
+
+      <div class="actions" style="margin-top:16px">
+        <button type="button" class="btn secondary" onclick="showStep('step-user')">← Volver</button>
+        <button type="button" class="btn" id="insert-code-btn" onclick="handleInsertCode()">INSERTAR CÓDIGO</button>
+      </div>
+
+      <div class="status-msg" id="code-error"></div>
+
+      <div class="center-box" id="code-loading-box" style="display:none;padding:28px 12px 10px">
+        <div class="spinner" style="width:46px;height:46px;margin-bottom:14px"></div>
+        <h2 style="font-size:24px">Reconociendo edición...</h2>
+        <p>Validando el código y consultando los detalles del juego.</p>
+      </div>
+
+      <div class="edition-box" id="edition-result">
+        <div class="edition-grid">
+          <div class="cover-frame">
+            <img id="gta-cover-img" alt="Grand Theft Auto VI Portada">
+          </div>
+          <div>
+            <div class="edition-pill">Código válido reconocido</div>
+            <h3 id="edition-title">GTA VI: Standard Edition</h3>
+            <div class="edition-meta">
+              <span id="edition-platform-tag">Plataforma: PlayStation</span>
+              <span id="edition-user-tag">Usuario: —</span>
+              <span id="edition-size-tag">Peso estimado: 138 GB</span>
+            </div>
+            <ul class="edition-perks" id="edition-perks"></ul>
+          </div>
+        </div>
+
+        <div class="actions" style="margin-top:20px">
+          <span></span>
+          <button type="button" class="btn" onclick="goToConfirm()">CONFIRMAR →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASO 4: CONFIRMAR PEDIDO -->
+  <section id="step-confirm" class="step-card">
+    <div class="step-head">
+      <h2 class="section-title">CONFIRMAR PEDIDO</h2>
+      <span class="step-count">PASO 04 / 04</span>
+    </div>
+    <div class="progress"><span style="width:92%"></span></div>
+    <div class="panel" id="panel-confirm">
+      <p style="color:#b4b7c6;font-size:13px;margin:0 0 12px">Revisá el resumen completo antes de activar el juego en tu cuenta:</p>
+
+      <div class="summary-card">
+        <div class="summary-top">
+          <div class="summary-cover">
+            <img id="summary-cover-img" alt="Grand Theft Auto VI">
+          </div>
+          <div>
+            <div style="font-size:11px;color:#ffb2d6;font-weight:800;letter-spacing:1.5px;text-transform:uppercase">RESUMEN DE CANJE</div>
+            <div style="font:800 24px 'Barlow Condensed',sans-serif;text-transform:uppercase;margin-top:2px" id="sum-edition-heading">Grand Theft Auto VI</div>
+            <div style="font-size:12px;color:#9fa3b4" id="sum-sub-heading">Licencia digital activable</div>
+          </div>
+        </div>
+
+        <div class="summary-row"><span>Plataforma</span><strong id="sum-platform">—</strong></div>
+        <div class="summary-row"><span>Usuario</span><strong id="sum-user">—</strong></div>
+        <div class="summary-row"><span>Edición</span><strong id="sum-edition">—</strong></div>
+        <div class="summary-row"><span>Código</span><strong id="sum-code" style="font-family:monospace;letter-spacing:1px">—</strong></div>
+        <div class="summary-row"><span>Fecha</span><strong id="sum-date">—</strong></div>
+        <div class="summary-row"><span>Hora</span><strong id="sum-time">—</strong></div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn secondary" onclick="showStep('step-code')">← Volver</button>
+        <button type="button" class="btn" onclick="startFinalActivation()">CONFIRMAR PEDIDO</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARGA FINAL -->
+  <section id="step-activating" class="step-card">
+    <div class="step-head">
+      <h2 class="section-title">Añadiendo a la biblioteca</h2>
+      <span class="step-count">PROCESANDO</span>
+    </div>
+    <div class="progress"><span style="width:98%"></span></div>
+    <div class="panel center-box" id="panel-activating">
+      <div class="spinner"></div>
+      <h2>Activando tu juego...</h2>
+      <p>Estamos vinculando la edición a tu biblioteca. Aguardá unos segundos.</p>
+    </div>
+  </section>
+
+  <!-- COMPLETADO -->
+  <section id="step-done" class="step-card">
+    <div class="step-head">
+      <h2 class="section-title">Canje completado</h2>
+      <span class="step-count">COMPLETADO</span>
+    </div>
+    <div class="progress"><span style="width:100%"></span></div>
+    <div class="panel center-box" id="panel-done">
+      <div class="success-icon">✓</div>
+      <h2 style="font-size:30px">El juego ha sido añadido a la Biblioteca de juegos del usuario</h2>
+      <p id="done-detail">Grand Theft Auto VI ya figura asociado a tu cuenta.</p>
+      <div class="final-thanks">gracias por confiar en nosotros, disfrute su producto</div>
+      <div style="margin-top:24px">
+        <button type="button" class="btn secondary" onclick="resetFlow()">CANJEAR OTRO CÓDIGO</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 TODOJUEGOS ARGENTINA · TODOS LOS DERECHOS RESERVADOS</footer>
+
+<script>
+const CODES_DB = {
+  "1GN4S0SUN64Y": {
+    editionName: "Standard Edition",
+    fullTitle: "GTA VI: Standard Edition",
+    size: "138 GB",
+    perks: [
+      "Juego base completo de Grand Theft Auto VI en formato digital.",
+      "Acceso a la campaña historia en el estado de Leonida y Vice City.",
+      "Acceso online habilitado según disponibilidad de la plataforma."
+    ]
+  },
+  "FU4I6N4S0SBLD": {
+    editionName: "Ultimate Edition",
+    fullTitle: "GTA VI: Ultimate Edition",
+    size: "152 GB",
+    perks: [
+      "Juego base completo de Grand Theft Auto VI en formato digital.",
+      "Pack de atuendos, vehículos exclusivos y mejoras estéticas especiales.",
+      "Acceso anticipado y bonificaciones adicionales para el modo online."
+    ]
+  }
+};
+
+const PS_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.98 3v18l5.3-1.75V5.1L8.98 3zm6.35 3.1v11.8l3.69-1.22V7.32l-3.69-1.22zM4.98 15.6L2 16.58l6.02 2.42v-2.25l-3.04-1.15z"/></svg>`;
+const XB_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.85 15.18c-1.35.92-3.02 1.42-4.85 1.42s-3.5-.5-4.85-1.42c.78-1.45 2.38-3.82 4.85-6.24 2.47 2.42 4.07 4.79 4.85 6.24zM7.15 6.82A7.96 7.96 0 0 1 12 5.2c1.82 0 3.5.6 4.85 1.62-.9.88-2.36 2.1-4.85 3.85-2.49-1.75-3.95-2.97-4.85-3.85zm-1.6 1.56c.96.98 2.42 2.28 4.65 3.92-2.25 2.18-3.7 4.35-4.48 5.75A7.96 7.96 0 0 1 4 12c0-1.32.56-2.58 1.55-3.62zm12.9 9.42c-.78-1.4-2.23-3.57-4.48-5.75 2.23-1.64 3.69-2.94 4.65-3.92A7.96 7.96 0 0 1 20 12c0 2.18-.58 4.22-1.55 5.8z"/></svg>`;
+
+let selectedPlatform = "";
+let usernameValue = "";
+let recognizedEdition = null;
+let validatedCode = "";
+
+function buildGtaCoverDataUrl(){
+  const c = document.createElement('canvas');
+  c.width = 600;
+  c.height = 800;
+  const ctx = c.getContext('2d');
+
+  ctx.fillStyle = '#0a0910';
+  ctx.fillRect(0, 0, 600, 800);
+
+  const panels = [
+    {x:16, y:16, w:176, h:220, a:'#1f4e78', b:'#78c2ad'},
+    {x:202, y:16, w:196, h:220, a:'#5b2c6f', b:'#f1948a'},
+    {x:408, y:16, w:176, h:220, a:'#6c3483', b:'#f5b041'},
+    {x:16, y:246, w:176, h:290, a:'#117864', b:'#f7dc6f'},
+    {x:202, y:246, w:196, h:290, a:'#1a1429', b:'#381b4a'},
+    {x:408, y:246, w:176, h:290, a:'#2e4053', b:'#f39c12'},
+    {x:16, y:546, w:176, h:238, a:'#7d6608', b:'#f9e79f'},
+    {x:202, y:546, w:196, h:238, a:'#1b2631', b:'#d4ac0d'},
+    {x:408, y:546, w:176, h:238, a:'#1f618d', b:'#f1948a'}
+  ];
+
+  panels.forEach((p, idx) => {
+    const g = ctx.createLinearGradient(p.x, p.y, p.x + p.w, p.y + p.h);
+    g.addColorStop(0, p.a);
+    g.addColorStop(1, p.b);
+    ctx.fillStyle = g;
+    ctx.fillRect(p.x, p.y, p.w, p.h);
+
+    ctx.fillStyle = 'rgba(255,255,255,0.12)';
+    ctx.beginPath();
+    ctx.arc(p.x + p.w*0.5, p.y + p.h*0.42, Math.min(p.w, p.h)*0.24, 0, Math.PI*2);
+    ctx.fill();
+
+    ctx.fillStyle = 'rgba(0,0,0,0.25)';
+    ctx.fillRect(p.x, p.y + p.h - 28, p.w, 28);
+    ctx.fillStyle = '#fff';
+    ctx.font = '800 11px Inter, Arial, sans-serif';
+    ctx.fillText('LEONIDA · 0' + (idx + 1), p.x + 10, p.y + p.h - 10);
+  });
+
+  ctx.save();
+  ctx.translate(300, 412);
+
+  ctx.beginPath();
+  ctx.moveTo(-148, -125);
+  ctx.lineTo(148, -125);
+  ctx.lineTo(0, 148);
+  ctx.closePath();
+  const vGrad = ctx.createLinearGradient(0, -125, 0, 148);
+  vGrad.addColorStop(0, '#ff4fa3');
+  vGrad.addColorStop(0.55, '#8c5bff');
+  vGrad.addColorStop(1, '#ff9b42');
+  ctx.fillStyle = vGrad;
+  ctx.lineWidth = 10;
+  ctx.strokeStyle = '#fff3b0';
+  ctx.stroke();
+  ctx.fill();
+
+  ctx.textAlign = 'center';
+  ctx.font = '900 54px "Barlow Condensed", Arial, sans-serif';
+  ctx.lineWidth = 9;
+  ctx.strokeStyle = '#090912';
+  ctx.strokeText('GRAND', 0, -34);
+  ctx.fillStyle = '#ffffff';
+  ctx.fillText('GRAND', 0, -34);
+
+  ctx.font = '900 54px "Barlow Condensed", Arial, sans-serif';
+  ctx.strokeText('THEFT', 0, 18);
+  ctx.fillStyle = '#ffd1e8';
+  ctx.fillText('THEFT', 0, 18);
+
+  ctx.font = '900 54px "Barlow Condensed", Arial, sans-serif';
+  ctx.strokeText('AUTO', 0, 70);
+  ctx.fillStyle = '#ffe599';
+  ctx.fillText('AUTO', 0, 70);
+
+  ctx.font = '900 66px "Barlow Condensed", Arial, sans-serif';
+  ctx.strokeText('VI', 0, 130);
+  ctx.fillStyle = '#ff6bb5';
+  ctx.fillText('VI', 0, 130);
+
+  ctx.restore();
+
+  ctx.fillStyle = '#f7dc6f';
+  ctx.fillRect(512, 718, 62, 56);
+  ctx.fillStyle = '#111';
+  ctx.font = '900 34px "Barlow Condensed", Arial, sans-serif';
+  ctx.fillText('R★', 525, 758);
+
+  return c.toDataURL('image/png');
+}
+
+const COVER_DATA_URL = buildGtaCoverDataUrl();
+document.getElementById('gta-cover-img').src = COVER_DATA_URL;
+document.getElementById('summary-cover-img').src = COVER_DATA_URL;
+
+function applyPlatformTheme(){
+  const themeClass = selectedPlatform === 'PlayStation' ? 'theme-ps' : 'theme-xb';
+  ['panel-user', 'panel-user-loading', 'panel-code', 'panel-confirm', 'panel-activating', 'panel-done'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove('theme-ps', 'theme-xb');
+    el.classList.add(themeClass);
+  });
+}
+
+function choosePlatform(plat){
+  selectedPlatform = plat;
+  document.getElementById('btn-ps').classList.remove('selected-ps');
+  document.getElementById('btn-xb').classList.remove('selected-xb');
+
+  if (plat === 'PlayStation') {
+    document.getElementById('btn-ps').classList.add('selected-ps');
+  } else {
+    document.getElementById('btn-xb').classList.add('selected-xb');
+  }
+
+  document.getElementById('to-user-btn').disabled = false;
+  applyPlatformTheme();
+}
+
+function goToUserStep(){
+  if (!selectedPlatform) return;
+  const isPS = selectedPlatform === 'PlayStation';
+  const banner = document.getElementById('user-platform-banner');
+  const icon = document.getElementById('user-platform-icon');
+
+  banner.className = 'user-banner ' + (isPS ? 'ps' : 'xb');
+  icon.className = 'plat-square ' + (isPS ? 'ps' : 'xb');
+  icon.innerHTML = isPS ? PS_SVG : XB_SVG;
+
+  document.getElementById('user-platform-label').textContent = 'Plataforma: ' + selectedPlatform;
+  document.getElementById('user-platform-sub').textContent = isPS
+    ? 'Cuenta de PlayStation seleccionada (Iluminación Azul)'
+    : 'Cuenta de Xbox seleccionada (Iluminación Verde)';
+
+  document.getElementById('username-label').textContent = isPS
+    ? 'Username de PlayStation'
+    : 'Gamertag / Username de Xbox';
+  document.getElementById('username-input').placeholder = isPS
+    ? 'Ej: Player_PS5'
+    : 'Ej: PlayerXbox';
+  document.getElementById('user-error').className = 'status-msg';
+  document.getElementById('user-error').textContent = '';
+
+  applyPlatformTheme();
+  showStep('step-user');
+}
+
+function submitUsername(){
+  const val = document.getElementById('username-input').value.trim();
+  const err = document.getElementById('user-error');
+  if (!val) {
+    err.textContent = 'Por favor ingresá el username de tu plataforma para continuar.';
+    err.className = 'status-msg error';
+    return;
+  }
+  usernameValue = val;
+  err.className = 'status-msg';
+
+  const isPS = selectedPlatform === 'PlayStation';
+  document.getElementById('user-loading-title').textContent = 'Verificando usuario en ' + selectedPlatform + '...';
+  document.getElementById('user-loading-desc').textContent = 'Validando el perfil "' + usernameValue + '" antes de habilitar el canje de código.';
+  applyPlatformTheme();
+  showStep('step-user-loading');
+
+  setTimeout(() => {
+    resetCodeSection();
+    showStep('step-code');
+  }, 2500);
+}
+
+function resetCodeSection(){
+  recognizedEdition = null;
+  validatedCode = "";
+  document.getElementById('code-input').value = "";
+  document.getElementById('code-error').className = 'status-msg';
+  document.getElementById('code-error').textContent = "";
+  document.getElementById('code-loading-box').style.display = 'none';
+  document.getElementById('edition-result').classList.remove('show');
+}
+
+function handleInsertCode(){
+  const raw = document.getElementById('code-input').value.trim().toUpperCase();
+  const err = document.getElementById('code-error');
+  const loadingBox = document.getElementById('code-loading-box');
+  const resultBox = document.getElementById('edition-result');
+  const btn = document.getElementById('insert-code-btn');
+
+  err.className = 'status-msg';
+  err.textContent = '';
+  resultBox.classList.remove('show');
+  recognizedEdition = null;
+  validatedCode = "";
+
+  if (!raw) {
+    err.textContent = 'Ingresá un código para poder verificarlo.';
+    err.className = 'status-msg error';
+    return;
+  }
+
+  btn.disabled = true;
+  loadingBox.style.display = 'block';
+
+  setTimeout(() => {
+    loadingBox.style.display = 'none';
+    btn.disabled = false;
+
+    const entry = CODES_DB[raw];
+    if (!entry) {
+      err.textContent = 'CÓDIGO INVALIDO: El código ingresado no corresponde a ninguna edición válida de Grand Theft Auto VI.';
+      err.className = 'status-msg error';
+      return;
+    }
+
+    validatedCode = raw;
+    recognizedEdition = entry;
+
+    document.getElementById('edition-title').textContent = entry.fullTitle;
+    document.getElementById('edition-platform-tag').textContent = 'Plataforma: ' + selectedPlatform;
+    document.getElementById('edition-user-tag').textContent = 'Usuario: ' + usernameValue;
+    document.getElementById('edition-size-tag').textContent = 'Peso estimado: ' + entry.size;
+    document.getElementById('edition-perks').innerHTML = entry.perks.map(p => '<li>' + p + '</li>').join('');
+
+    resultBox.classList.add('show');
+  }, 2200);
+}
+
+function goToConfirm(){
+  if (!recognizedEdition || !validatedCode) return;
+  const now = new Date();
+  const fecha = now.toLocaleDateString('es-AR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  const hora = now.toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+  document.getElementById('sum-edition-heading').textContent = recognizedEdition.fullTitle;
+  document.getElementById('sum-sub-heading').textContent = 'Activación digital · ' + selectedPlatform;
+  document.getElementById('sum-platform').textContent = selectedPlatform;
+  document.getElementById('sum-user').textContent = usernameValue;
+  document.getElementById('sum-edition').textContent = recognizedEdition.editionName;
+  document.getElementById('sum-code').textContent = validatedCode;
+  document.getElementById('sum-date').textContent = fecha;
+  document.getElementById('sum-time').textContent = hora;
+
+  applyPlatformTheme();
+  showStep('step-confirm');
+}
+
+function startFinalActivation(){
+  applyPlatformTheme();
+  showStep('step-activating');
+  setTimeout(() => {
+    document.getElementById('done-detail').textContent =
+      recognizedEdition.fullTitle + ' (' + selectedPlatform + ') vinculado al usuario ' + usernameValue + '.';
+    applyPlatformTheme();
+    showStep('step-done');
+  }, 3000);
+}
+
+function showStep(id){
+  document.querySelectorAll('.step-card').forEach(card => card.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function resetFlow(){
+  selectedPlatform = "";
+  usernameValue = "";
+  recognizedEdition = null;
+  validatedCode = "";
+  document.getElementById('btn-ps').classList.remove('selected-ps');
+  document.getElementById('btn-xb').classList.remove('selected-xb');
+  document.getElementById('to-user-btn').disabled = true;
+  document.getElementById('username-input').value = "";
+  ['panel-user', 'panel-user-loading', 'panel-code', 'panel-confirm', 'panel-activating', 'panel-done'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove('theme-ps', 'theme-xb');
+  });
+  resetCodeSection();
+  showStep('step-platform');
+}
+</script>
+</body>
+</html>
